@@ -5,17 +5,14 @@ import clsx from "clsx";
 import { useWindowScroll } from "react-use";
 import gsap from "gsap";
 
-// ナビゲーションアイテムの配列
 const navItems = ["Nexus", "Vault", "Prolouge", "About", "Contact"];
 
 const Navbar = () => {
-  // 状態管理用のstate
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const [isIndicatorActive, setIsIndicatorActive] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isNavVisible, setIsNavVisible] = useState(true);
 
-  // DOM要素への参照
   const navContainerRef = useRef(null);
   const audioElementRef = useRef(null);
 
@@ -35,7 +32,7 @@ const Navbar = () => {
     } else if (currentScrollY < lastScrollY) {
       // 上にスクロールした場合は表示
       setIsNavVisible(true);
-      navContainerRef.current.classList.remove("floating-nav");
+      navContainerRef.current.classList.add("floating-nav");
     }
 
     setLastScrollY(currentScrollY);
