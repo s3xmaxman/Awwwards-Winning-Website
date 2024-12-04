@@ -74,7 +74,6 @@ const Story = () => {
               </div>
             </div>
 
-            {/* for the rounded corner */}
             <svg
               className="invisible absolute size-0"
               xmlns="http://www.w3.org/2000/svg"
